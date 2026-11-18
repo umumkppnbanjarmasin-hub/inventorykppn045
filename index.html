@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sistem Inventory & Permintaan Barang — KPPN Banjarmasin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0f172a; }
+    iframe { width: 100%; height: 100%; border: none; display: block; }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" allow="camera; microphone; clipboard-write; fullscreen"></iframe>
+
+  <script>
+    // Ganti URL di bawah ini dengan URL Web App (/exec) milikmu
+    const GAS_EXEC_URL = "https://script.google.com/macros/s/AKfycbxnvW9_-6JNL9bv9yXz71Js1za4NgKT6eb56OVdk1sVBUuMmbRcfFcUcj2DTvek5qiqag/exec";
+
+    // Meneruskan parameter URL seperti ?akses=admin atau ?akses=bendahara ke Apps Script
+    const queryString = window.location.search;
+    document.getElementById("appFrame").src = GAS_EXEC_URL + queryString;
+  </script>
+</body>
+</html>
